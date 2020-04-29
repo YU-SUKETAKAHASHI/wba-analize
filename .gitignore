@@ -1,0 +1,4 @@
+mather_data
+*.json
+*.png
+__pycache__
