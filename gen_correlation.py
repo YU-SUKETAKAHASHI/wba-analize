@@ -2,7 +2,7 @@ import glob
 import json
 from times_analizer import times_analizer
 
-# slackからエクスポート▼データのパスを読み込む
+# slackからエクスポートしたデータのパスを読み込む
 path = glob.glob("./mather_data/*")
 times_path = [path_ for path_ in path if "times" in path_]
 print(len(times_path))
