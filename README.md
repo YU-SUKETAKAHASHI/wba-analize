@@ -12,7 +12,8 @@ python gen_correlation.py
 python visualize_network.py
 ```
 gen_correlation.pyを実行すると、以下のようなjsonファイル(correlation.json)が作成される。
-visualize_network.pyを実行して、jsonファイルを読み込みグラフに描画する。
+
+その後、visualize_network.pyを実行して、jsonファイルを読み込み、グラフに描画する。
 ```
 {"timesAの主": {"メンバーB": 発言回数, "メンバーC": 100, "メンバーD": 36, "メンバーE": 2}, 
 "timesBの主": {"メンバーA": 261, "メンバーC": 352, "メンバーF": 5, "メンバーG": 26, "メンバーH": 13}
