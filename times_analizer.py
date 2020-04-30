@@ -30,7 +30,7 @@ class times_analizer:
     def get_ownername(self):
         def request_ownername(ownerID):
             headers = {"Content-Type":"application/x-www-form-urlencoded"}
-            params = {"token":"xoxb-322693979316-1099534465300-CZtZ5kdRi2csQsmGHogOmKko", "user":ownerID}
+            params = {"token":"Bot User OAuth Access Token", "user":ownerID}
             r = requests.get("https://slack.com/api/users.profile.get", headers=headers, params=params)
             owner_name = r.json()["profile"]["real_name"]
             return owner_name
