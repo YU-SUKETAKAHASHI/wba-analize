@@ -53,9 +53,9 @@ class times_analizer:
     def daily_json_gen(self):
         for oneday_path in self.path:
             with open(oneday_path, "r", encoding="utf-8") as f:
-                daily_json = json.load(f)
+                oneday_json = json.load(f)
                 try:
-                    yield daily_json
+                    yield oneday_json
                 except:
                     break
         
