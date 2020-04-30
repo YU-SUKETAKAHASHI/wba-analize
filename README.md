@@ -6,7 +6,7 @@ git clone https://github.com/YU-SUKETAKAHASHI/wba-analize
 ```
 リポジトリをクローンした後、slackの発言データをエクスポートしたフォルダ(mather_data)をgen_correlation.pyと同階層に配置する。
 
-### timesでの人間相関ネットワークを作成する
+### 1.timesでの人間相関ネットワークを作成する
 ```
 python gen_correlation.py
 python visualize_network.py
@@ -21,7 +21,7 @@ visualize_network.pyを実行して、jsonファイルを読み込みグラフ�
 "timesZの主": {"メンバーH": 1, "メンバーT": 5}, }
 ```
 
-## timesの頻出単語を出力する
+### 2.timesの頻出単語を出力する
 ```
 準備中・・・
 ```
