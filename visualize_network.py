@@ -18,6 +18,8 @@ for owner, cor in correlation.items():
         else:
             G.edges[owner,member]["weight"] += count
 
+print(G.edges(data=True))
+
 # 次数中心性に応じて頂点のサイズを決める
 between_cent = nx.degree_centrality(G)
 node_size = [1000 * size for size in list(between_cent.values())]
@@ -29,7 +31,12 @@ nx.draw_networkx_nodes(G, pos, node_size=node_size)
 nx.draw_networkx_labels(G, pos, fontsize=0.1, font_family="Yu Gothic")
 width = np.array([d['weight'] for (u, v, d) in G.edges(data=True)])
 mean_ = mean(width)
-variance_ = variance(width)
+
+variance_ = 0
+for w in width:
+    variance_ += (mean_ - w)**2
+variance_ = variance_/len(correlation.keys())
+
 width_std = 50*(width-mean_)/variance_
 nx.draw_networkx_edges(G, pos, width=width_std)
 plt.show()

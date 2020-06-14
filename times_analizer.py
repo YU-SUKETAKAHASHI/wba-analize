@@ -30,7 +30,7 @@ class times_analizer:
     def get_ownername(self):
         def request_ownername(ownerID):
             headers = {"Content-Type":"application/x-www-form-urlencoded"}
-            params = {"token":"Bot User OAuth Access Token", "user":ownerID}
+            params = {"token":"xoxb-322693979316-1099534465300-EtNhA7tLAr9n9hFSKhy913Fc", "user":ownerID}
             r = requests.get("https://slack.com/api/users.profile.get", headers=headers, params=params)
             owner_name = r.json()["profile"]["real_name"]
             return owner_name
@@ -70,7 +70,7 @@ class times_analizer:
                     self.remarks_counter[user_name] += 1
                 except:
                     self.remarks_counter[user_name] = 1
-        return self.counter
+        return self.remarks_counter
 
     def text2words(self, words):
         t = Tokenizer()
